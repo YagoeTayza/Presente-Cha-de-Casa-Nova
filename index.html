@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f3dfc5">
+  <title>Chá de Casa Nova — Tayza e Yago</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script defer src="config.js"></script>
+  <script defer src="app.js"></script>
+</head>
+<body>
+  <main class="page">
+    <header class="hero">
+      <div class="sprig">❧</div>
+      <div class="house">⌂</div>
+      <p class="script">Chá de</p>
+      <h1>Casa Nova</h1>
+      <p class="couple">Tayza e Yago <span>♡</span></p>
+      <p class="intro">Escolha um item para nos abençoar</p>
+      <div class="counter"><strong id="available-count">—</strong><span>presentes disponíveis</span></div>
+    </header>
+
+    <section class="choose-panel" aria-labelledby="choose-title">
+      <h2 id="choose-title">Escolha seu presente</h2>
+      <label for="guest-name">Seu nome</label>
+      <input id="guest-name" maxlength="80" placeholder="Digite seu nome completo" autocomplete="name">
+      <p class="hint">Toque em um presente disponível para selecioná-lo.</p>
+      <div id="items" class="items" aria-live="polite">
+        <p class="loading">Carregando a lista…</p>
+      </div>
+      <button id="confirm-button" class="confirm" disabled>Confirmar meu presente</button>
+      <p id="status" class="status" role="status"></p>
+      <div id="whatsapp-actions" class="whatsapp-actions" hidden>
+        <p>Escolha registrada! Envie a confirmação para vocês:</p>
+        <a id="wa-one" target="_blank" rel="noopener">Enviar para Tayza e Yago — WhatsApp 1</a>
+        <a id="wa-two" target="_blank" rel="noopener">Enviar para Tayza e Yago — WhatsApp 2</a>
+      </div>
+    </section>
+
+    <footer>Com carinho, <strong>Tayza e Yago</strong> ♡</footer>
+  </main>
+</body>
+</html>
